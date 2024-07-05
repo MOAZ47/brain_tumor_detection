@@ -22,9 +22,9 @@ I have also worked on the comparison between VGG16 and RESNET-50 architecture. T
 ## Dataset
 
 The dataset used in this project contains MRI images of brain tumors. The images are preprocessed and labeled for training the model. Here is the folder structure of the data:
-1 yes- This folder contains the MRI scans that have a tumor
-2 no- This folder contains the MRI scans that do not have a tumor.
-3 pred- This folder contains unlabelled MRI scans for testing purposes.
+1. yes- This folder contains the MRI scans that have a tumor
+2. no- This folder contains the MRI scans that do not have a tumor.
+3. pred- This folder contains unlabelled MRI scans for testing purposes.
 
 Data can be found [here](https://www.kaggle.com/datasets/abhranta/brain-tumor-detection-mri)
 
