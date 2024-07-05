@@ -17,7 +17,7 @@ I have also worked on the comparison between VGG16 and RESNET-50 architecture. T
 - **Data**: MRI images of brain tumors, preprocessed and split into training and testing datasets.
 - **Model**: A Convolutional Neural Network (CNN) designed to classify images as either having a brain tumor or being healthy.
 - **Notebooks**: Jupyter notebooks that document the exploratory data analysis (EDA) and model development process. Here is the breakdown of the files:
-   - **Brain_Tumor.ipynb**: Notebook developed for the VGG16 model.
+   - **Brain_TumorVGG16.ipynb**: Notebook developed for the VGG16 model.
    - **Brain_Tumor_ResNet.ipynb**: Notebook developed for RESNET50 model.
    - **Brain_Tumor_web_app.ipynb**: Developed to turn notebook into a web application.
 - **Results**: Evaluation metrics and model performance comparison.
@@ -33,7 +33,7 @@ Data can be found [here](https://www.kaggle.com/datasets/abhranta/brain-tumor-de
 
 ## Models
 
-### [VGG16-based Model](https://github.com/MOAZ47/brain_tumor_detection/blob/master/Brain_Tumor.ipynb)
+### [VGG16-based Model](https://github.com/MOAZ47/brain_tumor_detection/blob/master/Brain_TumorVGG16.ipynb)
 
 The VGG16 model was used as the base, with additional layers added for fine-tuning. The model was trained for 10 epochs. Key steps include:
 
