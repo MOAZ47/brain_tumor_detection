@@ -10,20 +10,23 @@ https://mybinder.org/v2/gh/MOAZ47/brain_tumor_detection/HEAD?urlpath=%2Fvoila%2F
 
 This project is focused on detecting brain tumors from MRI images using deep learning techniques. The main objective is to develop a reliable model that can assist in the early diagnosis of brain tumors, improving patient outcomes.
 
+I have also worked on the comparison between VGG16 and RESNET-50 architecture. The results are shown below
+
 ## Project Structure
 
 - **Data**: MRI images of brain tumors, preprocessed and split into training and testing datasets.
 - **Model**: A Convolutional Neural Network (CNN) designed to classify images as either having a brain tumor or being healthy.
-- **Scripts**: Python scripts for data preprocessing, model training, evaluation, and prediction.
 - **Notebooks**: Jupyter notebooks that document the exploratory data analysis (EDA) and model development process.
 - **Results**: Evaluation metrics and model performance visualizations.
 
 ## Dataset
 
-The dataset used in this project contains MRI images of brain tumors. The images are preprocessed and labeled for training the model. 
+The dataset used in this project contains MRI images of brain tumors. The images are preprocessed and labeled for training the model. Here is the folder structure of the data:
 1 yes- This folder contains the MRI scans that have a tumor
 2 no- This folder contains the MRI scans that do not have a tumor.
 3 pred- This folder contains unlabelled MRI scans for testing purposes.
+
+Data can be found [here](https://www.kaggle.com/datasets/abhranta/brain-tumor-detection-mri)
 
 ## Machine Learning Model
 
@@ -35,7 +38,7 @@ The project utilizes a Convolutional Neural Network (CNN); RESNET-50, for image 
 
 ## Tools and Technologies
 
-- **TensorFlow** and **Keras**: For building and training the deep learning model.
+- **TensorFlow**, **Fast.ai** and **Keras**: For building and training the deep learning model.
 - **OpenCV**: For image preprocessing and augmentation.
 - **NumPy** and **Pandas**: For data manipulation and analysis.
 - **Matplotlib** and **Seaborn**: For data visualization and plotting model performance.
@@ -59,72 +62,32 @@ The project utilizes a Convolutional Neural Network (CNN); RESNET-50, for image 
    https://www.kaggle.com/datasets/abhranta/brain-tumor-detection-mri
    ```
 
-## Usage
 
-1. Preprocess the data:
-   ```bash
-   python preprocess_data.py
-   ```
-
-2. Train the model:
-   ```bash
-   python train_model.py
-   ```
-
-3. Evaluate the model:
-   ```bash
-   python evaluate_model.py
-   ```
-
-4. Make predictions on new images:
-   ```bash
-   python predict.py --image path/to/image.jpg
-   ```
 
 ## Results
 
 The trained model achieves high accuracy in detecting brain tumors from MRI images. Below are some sample results:
 
-- **Accuracy**: 96.3%
-- **Precision**: High
-- **Recall**: High
-- **F1 Score**: High
+- **Accuracy for RESNET 50**: 98.5%
+- **Accuracy for VGG16**: 96.3%
 
 ## Results Comparison
 
-### Model 1: [VGG16-based Brain Tumor Detection](https://github.com/MOAZ47/brain_tumor_detection/blob/master/Brain_Tumor.ipynb)
-
-**Training Results:**
-- **Epochs**: 10
-- **Training Accuracy**:
-  - Initial epoch: 72.80%
-  - Final epoch: 97.00%
-- **Validation Accuracy**:
-  - Initial epoch: 85.50%
-  - Final epoch: 92.80%
-- **Training Loss**:
-  - Initial epoch: 0.5821
-  - Final epoch: 0.1096
-- **Validation Loss**:
-  - Initial epoch: 0.3325
-  - Final epoch: 0.1802
-
-### Model 2: [ResNet50-based Brain Tumor Detection](https://github.com/MOAZ47/brain_tumor_detection/blob/master/Brain_Tumor_ResNet.ipynb)
-
-**Training Results:**
-- **Epochs**: Up to 7 (Early Stopping enabled)
-- **Training Accuracy**:
-  - Initial epoch: 69.39%
-  - Final epoch: 98.51%
-- **Validation Accuracy**:
-  - Initial epoch: 91.20%
-  - Final epoch: 95.07%
-- **Training Loss**:
-  - Initial epoch: 0.5910
-  - Final epoch: 0.0700
-- **Validation Loss**:
-  - Initial epoch: 0.2388
-  - Final epoch: 0.1348
+| Metric                | VGG16-based Model      | ResNet50-based Model  |
+|-----------------------|------------------------|-----------------------|
+| **Epochs**            | 10                     | Up to 7 (Early Stopping) |
+| **Training Accuracy** |                        |                       |
+| Initial Epoch         | 72.80%                 | 69.39%                |
+| Final Epoch           | 97.00%                 | 98.51%                |
+| **Validation Accuracy**|                       |                       |
+| Initial Epoch         | 85.50%                 | 91.20%                |
+| Final Epoch           | 92.80%                 | 95.07%                |
+| **Training Loss**     |                        |                       |
+| Initial Epoch         | 0.5821                 | 0.5910                |
+| Final Epoch           | 0.1096                 | 0.0700                |
+| **Validation Loss**   |                        |                       |
+| Initial Epoch         | 0.3325                 | 0.2388                |
+| Final Epoch           | 0.1802                 | 0.1348                |
 
 ### Analysis
 
@@ -143,7 +106,6 @@ The trained model achieves high accuracy in detecting brain tumors from MRI imag
 ### Conclusion
 
 The ResNet50-based approach with automated data handling and early stopping provides better results in terms of both training and validation metrics. It is also more efficient in achieving these results within fewer epochs. This approach is more automated and robust, leading to a streamlined workflow and enhanced model performance.
-
 
 ## Contributing
 
