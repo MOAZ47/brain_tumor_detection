@@ -91,30 +91,35 @@ The trained model achieves high accuracy in detecting brain tumors from MRI imag
 
 ### Model Comparison Table
 
-| Metric          | VGG16                           | ResNet50                        |
-|-----------------|---------------------------------|---------------------------------|
-|**Epochs to Early Stopping**| 19 | 17|
-|**Validation Loss** | 0.2414                         | 9.8260                          |
-| **Validation Accuracy**    | 0.5794 (57.94%)                 | 0.6031 (60.31%)                 |
-| **Precision**   | 0.9899 (98.99%)                 | 0.7747 (77.47%)                 |
-| **Recall**      | 0.9899 (98.99%)                 | 0.7592 (75.92%)                 |
-| **F1 Score**    | 0.9899 (98.99%)                 | 0.7669 (76.69%)                 |
-|**Training Accuracy** | 0.6827 (69.27%) | 0.7183 (71.83%) |
+| Metric                      | VGG16                           | ResNet50                        |
+|-----------------------------|---------------------------------|---------------------------------|
+|**Epochs to Early Stopping** | 19                              | 17                              |
+|**Training Loss**            | 0.7932                          | 0.8290                         |
+|**Validation Loss**          | 1.1328                          | 1.1147                          |
+|**Training Accuracy**        | 0.6827 (69.27%)                 | 0.7183 (71.83%)                 |
+| **Validation Accuracy**     | 0.5794 (57.94%)                 | 0.6031 (60.31%)                 |
+| **Precision**               | 0.7047 (70.47%)                 | 0.7372 (73.72%)                 |
+| **Recall**                  | 0.7054 (70.54%)                 | 0.7379 (73.79%)                 |
+| **F1 Score**                | 0.6904 (69.04%)                 | 0.7204 (72.04%)                 |
 
-### Interpretation
 
-- **Validation Loss**: The VGG16 model has a much lower validation loss compared to the ResNet50 model, indicating better performance in minimizing loss on the validation set.
-- **Accuracy**: The VGG16 model achieves significantly higher accuracy than the ResNet50 model, suggesting better performance in correctly classifying the validation samples.
-- **Precision**: The VGG16 model shows higher precision, indicating better identification of the positive class.
-- **Recall**: The VGG16 model also has higher recall, meaning it captures more true positives.
-- **F1 Score**: The VGG16 model has a better balance between precision and recall compared to the ResNet50 model.
+### Interpretation:
+
+- ResNet achieved slightly better validation accuracy (0.6031) compared to VGG (0.5794). This suggests that ResNet might generalize better to unseen data.
+- VGG trained a bit faster, reaching early stopping in 19 epochs compared to ResNet's 17 epochs. This could be due to the simpler architecture of VGG.
+- Both models show a similar trend of decreasing training loss and increasing training accuracy over epochs. This indicates successful learning from the training data.
+
+### Implications:
+
+- ResNet might be a better choice if validation accuracy is the primary concern.
+- If training time is a constraint, VGG might be a viable alternative with a slight trade-off in accuracy.
 
 
 ### Conclusion
 
-Based on the evaluation metrics, the VGG16 model outperforms the ResNet50 model across all measured criteria. The VGG16 model achieves a significantly lower validation loss of 0.2414 compared to 9.8260 for ResNet50, indicating superior performance in minimizing prediction errors on unseen data. Moreover, VGG16 achieves a higher accuracy of 99.00% versus 77.00% for ResNet50, demonstrating its effectiveness in correctly classifying brain tumor images. The precision, recall, and F1 score metrics further confirm VGG16's superiority, with values of approximately 98.99% each, compared to ResNet50's metrics ranging around 76-77%.
-
-In conclusion, the VGG16 model, with its deeper architecture and effective feature extraction capabilities, proves to be the preferred choice for brain tumor classification tasks based on this evaluation. Its robust performance underscores its suitability for medical imaging applications where high accuracy and reliable predictions are paramount.
+- ResNet outperformed VGG in terms of validation accuracy, suggesting better generalization potential.
+- ResNet appears to have achieved better validation accuracy (around 0.7) compared to VGG (around 0.58) based on the peaks of their validation accuracy curves. ResNet's training loss seems to have plateaued at a slightly higher value than VGG's, potentially indicating slightly less optimal learning, but this could be due to factors like different learning rates used in training.
+- VGG trained slightly faster, potentially due to its simpler architecture.
 
 ## Contributing
 
