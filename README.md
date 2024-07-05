@@ -28,7 +28,7 @@ The dataset used in this project contains MRI images of brain tumors. The images
 2. no- This folder contains the MRI scans that do not have a tumor.
 3. pred- This folder contains unlabelled MRI scans for testing purposes.
 
-Data can be found [here](https://www.kaggle.com/datasets/abhranta/brain-tumor-detection-mri)
+Data can be found [here](https://www.kaggle.com/datasets/sartajbhuvaji/brain-tumor-classification-mri)
 
 ### Models
 
