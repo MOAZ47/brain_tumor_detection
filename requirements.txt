@@ -1,6 +1,7 @@
+https://pypi.tuna.tsinghua.edu.cn/packages/77/6d/ce463985a72f520fbf26c3023222acadeb9c28c496faa8cba15ebf02ba77/tensorflow_cpu-2.10.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=ae25b43113b7e8ab3aad8e4c80232f80b783058d8bb0180e03c54e1fdd695a41
 numpy>=1.18.0
 Pillow==7.2.0
 matplotlib==3.2.2
 ipywidgets==7.5.1
-tensorflow >= 2.0.0
+#tensorflow >= 2.0.0
 voila==0.2.4
