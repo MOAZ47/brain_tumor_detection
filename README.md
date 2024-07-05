@@ -5,8 +5,6 @@ Click here to launch the model
 
 https://mybinder.org/v2/gh/MOAZ47/brain_tumor_detection/HEAD?urlpath=%2Fvoila%2Frender%2FBrain_Tumor_web_app.ipynb
 
-Here's a template for your GitHub README file for your brain tumor detection project:
-
 ---
 ## Overview
 
@@ -87,10 +85,65 @@ The project utilizes a Convolutional Neural Network (CNN); RESNET-50, for image 
 
 The trained model achieves high accuracy in detecting brain tumors from MRI images. Below are some sample results:
 
-- **Accuracy**: 96%
-- **Precision**: 93%
-- **Recall**: 92%
-- **F1 Score**: 92%
+- **Accuracy**: 96.3%
+- **Precision**: High
+- **Recall**: High
+- **F1 Score**: High
+
+## Results Comparison
+
+### Model 1: [VGG16-based Brain Tumor Detection](https://github.com/MOAZ47/brain_tumor_detection/blob/master/Brain_Tumor.ipynb)
+
+**Training Results:**
+- **Epochs**: 10
+- **Training Accuracy**:
+  - Initial epoch: 72.80%
+  - Final epoch: 97.00%
+- **Validation Accuracy**:
+  - Initial epoch: 85.50%
+  - Final epoch: 92.80%
+- **Training Loss**:
+  - Initial epoch: 0.5821
+  - Final epoch: 0.1096
+- **Validation Loss**:
+  - Initial epoch: 0.3325
+  - Final epoch: 0.1802
+
+### Model 2: [ResNet50-based Brain Tumor Detection](https://github.com/MOAZ47/brain_tumor_detection/blob/master/Brain_Tumor_ResNet.ipynb)
+
+**Training Results:**
+- **Epochs**: Up to 7 (Early Stopping enabled)
+- **Training Accuracy**:
+  - Initial epoch: 69.39%
+  - Final epoch: 98.51%
+- **Validation Accuracy**:
+  - Initial epoch: 91.20%
+  - Final epoch: 95.07%
+- **Training Loss**:
+  - Initial epoch: 0.5910
+  - Final epoch: 0.0700
+- **Validation Loss**:
+  - Initial epoch: 0.2388
+  - Final epoch: 0.1348
+
+### Analysis
+
+- **Training and Validation Performance**:
+  - The ResNet50-based model shows better training and validation performance overall.
+  - Early stopping in the second model helps in preventing overfitting, indicated by better validation accuracy and lower validation loss.
+
+- **Efficiency**:
+  - The ResNet50-based model converges faster, reaching high accuracy within 7 epochs, compared to 10 epochs for the VGG16-based model.
+  - This indicates that the second approach is more efficient in terms of training time and achieving higher performance.
+
+- **Model Architecture**:
+  - ResNet50, known for its deeper architecture and residual connections, performs better than VGG16 in this context.
+  - Using a single Dense layer on top of ResNet50 leverages the power of pre-trained weights, contributing to improved performance.
+
+### Conclusion
+
+The ResNet50-based approach with automated data handling and early stopping provides better results in terms of both training and validation metrics. It is also more efficient in achieving these results within fewer epochs. This approach is more automated and robust, leading to a streamlined workflow and enhanced model performance.
+
 
 ## Contributing
 
