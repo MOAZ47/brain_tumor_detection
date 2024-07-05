@@ -30,7 +30,7 @@ Data can be found [here](https://www.kaggle.com/datasets/abhranta/brain-tumor-de
 
 ## Models
 
-### VGG16-based Model
+### [VGG16-based Model](https://github.com/MOAZ47/brain_tumor_detection/blob/master/Brain_Tumor.ipynb)
 
 The VGG16 model was used as the base, with additional layers added for fine-tuning. The model was trained for 10 epochs. Key steps include:
 
@@ -38,7 +38,7 @@ The VGG16 model was used as the base, with additional layers added for fine-tuni
 2. **Model Architecture**: Using the VGG16 base with additional Dense layers.
 3. **Training**: Trained for 10 epochs with early stopping and model checkpointing.
 
-### ResNet50-based Model
+### [ResNet50-based Model](https://github.com/MOAZ47/brain_tumor_detection/blob/master/Brain_Tumor_ResNet.ipynb)
 
 The ResNet50 model was employed for a deeper architecture with residual connections, which helps in better gradient flow. Key steps include:
 
