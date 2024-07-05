@@ -17,8 +17,7 @@ I have also worked on the comparison between VGG16 and RESNET-50 architecture. T
 - **Data**: MRI images of brain tumors, preprocessed and split into training and testing datasets.
 - **Model**: A Convolutional Neural Network (CNN) designed to classify images as either having a brain tumor or being healthy.
 - **Notebooks**: Jupyter notebooks that document the exploratory data analysis (EDA) and model development process. Here is the breakdown of the files:
-   - **Brain_TumorVGG16.ipynb**: Notebook developed for the VGG16 model.
-   - **Brain_Tumor_ResNet.ipynb**: Notebook developed for RESNET50 model.
+   - **Brain_Tumor_Comparison6.ipynb**: Notebook developed for comparison of VGG16 model and Resnet 50.
    - **Brain_Tumor_web_app.ipynb**: Developed to turn notebook into a web application.
 - **Results**: Evaluation metrics and model performance comparison.
 
@@ -75,50 +74,39 @@ The ResNet50 model was employed for a deeper architecture with residual connecti
    https://www.kaggle.com/datasets/abhranta/brain-tumor-detection-mri
    ```
 
-
-
 ## Results
 
 The trained model achieves high accuracy in detecting brain tumors from MRI images. Below are some sample results:
 
-- **Accuracy for RESNET 50**: 98.5%
-- **Accuracy for VGG16**: 96.3%
+- **Accuracy for RESNET 50**: 77.0%
+- **Accuracy for VGG16**: 99.0%
 
-## Results Comparison
+## Model Evaluation Comparison
 
-| Metric                | VGG16-based Model      | ResNet50-based Model  |
-|-----------------------|------------------------|-----------------------|
-| **Epochs**            | 10                     | Up to 7 (Early Stopping) |
-| **Training Accuracy** |                        |                       |
-| Initial Epoch         | 72.80%                 | 69.39%                |
-| Final Epoch           | 97.00%                 | 98.51%                |
-| **Validation Accuracy**|                       |                       |
-| Initial Epoch         | 85.50%                 | 91.20%                |
-| Final Epoch           | 92.80%                 | 95.07%                |
-| **Training Loss**     |                        |                       |
-| Initial Epoch         | 0.5821                 | 0.5910                |
-| Final Epoch           | 0.1096                 | 0.0700                |
-| **Validation Loss**   |                        |                       |
-| Initial Epoch         | 0.3325                 | 0.2388                |
-| Final Epoch           | 0.1802                 | 0.1348                |
+### Model Comparison Table
 
-### Analysis
+| Metric          | VGG16                           | ResNet50                        |
+|-----------------|---------------------------------|---------------------------------|
+| **Validation Loss** | 0.2414                         | 9.8260                          |
+| **Accuracy**    | 0.9900 (99.00%)                 | 0.7700 (77.00%)                 |
+| **Precision**   | 0.9899 (98.99%)                 | 0.7747 (77.47%)                 |
+| **Recall**      | 0.9899 (98.99%)                 | 0.7592 (75.92%)                 |
+| **F1 Score**    | 0.9899 (98.99%)                 | 0.7669 (76.69%)                 |
 
-- **Training and Validation Performance**:
-  - The ResNet50-based model shows better training and validation performance overall.
-  - Early stopping in the second model helps in preventing overfitting, indicated by better validation accuracy and lower validation loss.
+### Interpretation
 
-- **Efficiency**:
-  - The ResNet50-based model converges faster, reaching high accuracy within 7 epochs, compared to 10 epochs for the VGG16-based model.
-  - This indicates that the second approach is more efficient in terms of training time and achieving higher performance.
+- **Validation Loss**: The VGG16 model has a much lower validation loss compared to the ResNet50 model, indicating better performance in minimizing loss on the validation set.
+- **Accuracy**: The VGG16 model achieves significantly higher accuracy than the ResNet50 model, suggesting better performance in correctly classifying the validation samples.
+- **Precision**: The VGG16 model shows higher precision, indicating better identification of the positive class.
+- **Recall**: The VGG16 model also has higher recall, meaning it captures more true positives.
+- **F1 Score**: The VGG16 model has a better balance between precision and recall compared to the ResNet50 model.
 
-- **Model Architecture**:
-  - ResNet50, known for its deeper architecture and residual connections, performs better than VGG16 in this context.
-  - Using a single Dense layer on top of ResNet50 leverages the power of pre-trained weights, contributing to improved performance.
 
 ### Conclusion
 
-The ResNet50-based approach with automated data handling and early stopping provides better results in terms of both training and validation metrics. It is also more efficient in achieving these results within fewer epochs. This approach is more automated and robust, leading to a streamlined workflow and enhanced model performance.
+Based on the evaluation metrics, the VGG16 model outperforms the ResNet50 model across all measured criteria. The VGG16 model achieves a significantly lower validation loss of 0.2414 compared to 9.8260 for ResNet50, indicating superior performance in minimizing prediction errors on unseen data. Moreover, VGG16 achieves a higher accuracy of 99.00% versus 77.00% for ResNet50, demonstrating its effectiveness in correctly classifying brain tumor images. The precision, recall, and F1 score metrics further confirm VGG16's superiority, with values of approximately 98.99% each, compared to ResNet50's metrics ranging around 76-77%.
+
+In conclusion, the VGG16 model, with its deeper architecture and effective feature extraction capabilities, proves to be the preferred choice for brain tumor classification tasks based on this evaluation. Its robust performance underscores its suitability for medical imaging applications where high accuracy and reliable predictions are paramount.
 
 ## Contributing
 
