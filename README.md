@@ -37,7 +37,7 @@ Data can be found [here](https://www.kaggle.com/datasets/abhranta/brain-tumor-de
 
 The VGG16 model was used as the base, with additional layers added for fine-tuning. The model was trained for 10 epochs. Key steps include:
 
-1. **Data Preprocessing**: Image resizing and augmentation.
+1. **Data Preprocessing**: Image resizing and Augmentation including scaling, rotation, and lighting.
 2. **Model Architecture**: Using the VGG16 base with additional Dense layers.
 3. **Training**: Trained for 10 epochs with early stopping and model checkpointing.
 
@@ -45,7 +45,7 @@ The VGG16 model was used as the base, with additional layers added for fine-tuni
 
 The ResNet50 model was employed for a deeper architecture with residual connections, which helps in better gradient flow. Key steps include:
 
-1. **Data Preprocessing**: Automated data handling with `ImageDataGenerator`.
+1. **Data Preprocessing**: Image resizing and Augmentation including scaling, rotation, and lighting.
 2. **Model Architecture**: Using ResNet50 as the base and adding a Dense layer for classification.
 3. **Training**: Trained with early stopping, resulting in faster convergence.
 
