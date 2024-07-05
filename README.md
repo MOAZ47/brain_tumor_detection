@@ -32,26 +32,32 @@ Data can be found [here](https://www.kaggle.com/datasets/abhranta/brain-tumor-de
 
 ### Models
 
+**Augmentations**:
+- Resizing --> 256x256
+- RandomResizedCrop --> 224
+- RandomHorizontalFlip
+- Normalize
+
 **VGG16-based Model**
 
 The VGG16 model serves as the foundation, enhanced with additional layers for fine-tuning. Key steps include:
 
-- **Data Preprocessing:** Images are resized to 256x256 and augmented with scaling, rotation, and lighting adjustments.
 - **Model Architecture:** Utilizes the VGG16 base with additional Dense layers tailored for classification.
-- **Training:** Trained for 10 epochs with early stopping and model checkpointing.
+- **Fine tuning:** Froze all except the last two layers.
+- **Training:** Trained for 25 epochs with early stopping and model checkpointing.
 
 **ResNet50-based Model**
 
 The ResNet50 model is chosen for its deep architecture featuring residual connections for improved gradient flow. Key steps include:
 
-- **Data Preprocessing:** Similar preprocessing steps as VGG16, including image resizing and augmentation.
 - **Model Architecture:** ResNet50 forms the core architecture, supplemented with a Dense layer for classification.
-- **Training:** Trained with early stopping, achieving faster convergence.
+- **Fine tuning:** Froze all except the last two layers.
+- **Training:** Trained with early stopping, achieving faster convergence for 25 epochs.
 
 ### Tools and Technologies
 
-- **Frameworks:** Fast.ai for model development and training.
-- **Image Processing:** Fast.ai library for image preprocessing and augmentation.
+- **Library:** PyTorch for model development and training.
+- **Image Processing:** PyTorch torchvision module for image preprocessing and augmentation.
 - **Data Handling:** NumPy and Pandas for efficient data manipulation and analysis.
 - **Visualization:** Matplotlib and Seaborn for visualizing data and plotting model performance.
 - **Development Environment:** Jupyter Notebook for interactive development and documentation.
@@ -78,8 +84,8 @@ The ResNet50 model is chosen for its deep architecture featuring residual connec
 
 The trained model achieves high accuracy in detecting brain tumors from MRI images. Below are some sample results:
 
-- **Accuracy for RESNET 50**: 77.0%
-- **Accuracy for VGG16**: 99.0%
+- **Accuracy for RESNET 50**: 60.31%
+- **Accuracy for VGG16**: 57.94%
 
 ## Model Evaluation Comparison
 
@@ -87,11 +93,13 @@ The trained model achieves high accuracy in detecting brain tumors from MRI imag
 
 | Metric          | VGG16                           | ResNet50                        |
 |-----------------|---------------------------------|---------------------------------|
-| **Validation Loss** | 0.2414                         | 9.8260                          |
-| **Accuracy**    | 0.9900 (99.00%)                 | 0.7700 (77.00%)                 |
+|**Epochs to Early Stopping**| 19 | 17|
+|**Validation Loss** | 0.2414                         | 9.8260                          |
+| **Validation Accuracy**    | 0.5794 (57.94%)                 | 0.6031 (60.31%)                 |
 | **Precision**   | 0.9899 (98.99%)                 | 0.7747 (77.47%)                 |
 | **Recall**      | 0.9899 (98.99%)                 | 0.7592 (75.92%)                 |
 | **F1 Score**    | 0.9899 (98.99%)                 | 0.7669 (76.69%)                 |
+|**Training Accuracy** | 0.6827 (69.27%) | 0.7183 (71.83%) |
 
 ### Interpretation
 
