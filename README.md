@@ -28,13 +28,23 @@ The dataset used in this project contains MRI images of brain tumors. The images
 
 Data can be found [here](https://www.kaggle.com/datasets/abhranta/brain-tumor-detection-mri)
 
-## Machine Learning Model
+## Models
 
-The project utilizes a Convolutional Neural Network (CNN); RESNET-50, for image classification. The CNN architecture is designed to effectively capture spatial features in the MRI images, making it suitable for detecting tumors. Key components of the model include:
-- Convolutional layers for feature extraction
-- Max pooling layers for down-sampling
-- Fully connected layers for classification
-- Softmax activation for output probabilities
+### VGG16-based Model
+
+The VGG16 model was used as the base, with additional layers added for fine-tuning. The model was trained for 10 epochs. Key steps include:
+
+1. **Data Preprocessing**: Image resizing and augmentation.
+2. **Model Architecture**: Using the VGG16 base with additional Dense layers.
+3. **Training**: Trained for 10 epochs with early stopping and model checkpointing.
+
+### ResNet50-based Model
+
+The ResNet50 model was employed for a deeper architecture with residual connections, which helps in better gradient flow. Key steps include:
+
+1. **Data Preprocessing**: Automated data handling with `ImageDataGenerator`.
+2. **Model Architecture**: Using ResNet50 as the base and adding a Dense layer for classification.
+3. **Training**: Trained with early stopping, resulting in faster convergence.
 
 ## Tools and Technologies
 
