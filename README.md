@@ -30,31 +30,31 @@ The dataset used in this project contains MRI images of brain tumors. The images
 
 Data can be found [here](https://www.kaggle.com/datasets/abhranta/brain-tumor-detection-mri)
 
-## Models
+### Models
 
-### [VGG16-based Model](https://github.com/MOAZ47/brain_tumor_detection/blob/master/Brain_TumorVGG16.ipynb)
+**VGG16-based Model**
 
-The VGG16 model was used as the base, with additional layers added for fine-tuning. The model was trained for 10 epochs. Key steps include:
+The VGG16 model serves as the foundation, enhanced with additional layers for fine-tuning. Key steps include:
 
-1. **Data Preprocessing**: Image resizing and Augmentation including scaling, rotation, and lighting.
-2. **Model Architecture**: Using the VGG16 base with additional Dense layers.
-3. **Training**: Trained for 10 epochs with early stopping and model checkpointing.
+- **Data Preprocessing:** Images are resized to 256x256 and augmented with scaling, rotation, and lighting adjustments.
+- **Model Architecture:** Utilizes the VGG16 base with additional Dense layers tailored for classification.
+- **Training:** Trained for 10 epochs with early stopping and model checkpointing.
 
-### [ResNet50-based Model](https://github.com/MOAZ47/brain_tumor_detection/blob/master/Brain_Tumor_ResNet.ipynb)
+**ResNet50-based Model**
 
-The ResNet50 model was employed for a deeper architecture with residual connections, which helps in better gradient flow. Key steps include:
+The ResNet50 model is chosen for its deep architecture featuring residual connections for improved gradient flow. Key steps include:
 
-1. **Data Preprocessing**: Image resizing and Augmentation including scaling, rotation, and lighting.
-2. **Model Architecture**: Using ResNet50 as the base and adding a Dense layer for classification.
-3. **Training**: Trained with early stopping, resulting in faster convergence.
+- **Data Preprocessing:** Similar preprocessing steps as VGG16, including image resizing and augmentation.
+- **Model Architecture:** ResNet50 forms the core architecture, supplemented with a Dense layer for classification.
+- **Training:** Trained with early stopping, achieving faster convergence.
 
-## Tools and Technologies
+### Tools and Technologies
 
-- **TensorFlow**, **Fast.ai** and **Keras**: For building and training the deep learning model.
-- **OpenCV**: For image preprocessing and augmentation.
-- **NumPy** and **Pandas**: For data manipulation and analysis.
-- **Matplotlib** and **Seaborn**: For data visualization and plotting model performance.
-- **Jupyter Notebook**: For interactive development and documentation.
+- **Frameworks:** TensorFlow, Fast.ai, and Keras for model development and training.
+- **Image Processing:** OpenCV for image preprocessing and augmentation.
+- **Data Handling:** NumPy and Pandas for efficient data manipulation and analysis.
+- **Visualization:** Matplotlib and Seaborn for visualizing data and plotting model performance.
+- **Development Environment:** Jupyter Notebook for interactive development and documentation.
 
 ## Installation
 
