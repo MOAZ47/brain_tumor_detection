@@ -1,6 +1,6 @@
-numpy==1.26.4
-torch==2.0.1+cpu
-torchvision==0.15.2+cpu
+numpy==1.23.5
+torch==1.13.1
+torchvision==0.14.1
 pillow==10.4.0
 matplotlib==3.2.2
 voila==0.2.4
