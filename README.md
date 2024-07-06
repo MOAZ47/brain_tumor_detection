@@ -19,8 +19,10 @@ I have also worked on the comparison between VGG16 and RESNET-50 architecture. T
 - **Data**: MRI images of brain tumors, preprocessed and split into training and testing datasets.
 - **Model**: A Convolutional Neural Network (CNN) designed to classify images as either having a brain tumor or being healthy.
 - **Notebooks**: Jupyter notebooks that document the exploratory data analysis (EDA) and model development process. Here is the breakdown of the files:
-   - **Brain_Tumor_Comparison.ipynb**: Notebook developed for comparison of VGG16 model and Resnet 50.
-   - **Brain_Tumor_web_app.ipynb**: Developed to turn notebook into a web application.
+   - **Brain_Tumor_Comparison.ipynb**: Notebook developed for comparison of VGG16 model and RESNET 50.
+   - **Brain_Tumor_ResNet.ipynb**: Notebook developed for creating the final model using RESNET50
+   - **voila_web_app.ipynb**: Developed to turn notebook into a web application using Voila.
+   - ***.jpg**: All the JPG files were uploaded for testing purpose. They all are MRI scans of brain.
 - **Results**: Evaluation metrics and model performance comparison.
 
 ## Dataset
